@@ -21,6 +21,7 @@ function DoughnutChart({
   const [chart, setChart] = useState(null)
   const canvas = useRef(null);
   const legend = useRef(null);
+  const legend2 = useRef(null);
   const { currentTheme } = useThemeProvider();
   const darkMode = currentTheme === 'dark';
   const { tooltipTitleColor, tooltipBodyColor, tooltipBgColor, tooltipBorderColor } = chartColors; 
@@ -32,9 +33,9 @@ function DoughnutChart({
       type: 'doughnut',
       data: data,
       options: {
-        cutout: '80%',
+        cutout: '60%',
         layout: {
-          padding: 24,
+          padding: 0,
         },
         plugins: {
           legend: {
@@ -61,6 +62,71 @@ function DoughnutChart({
         {
           id: 'htmlLegend',
           afterUpdate(c, args, options) {
+
+
+            // const ul2 = legend2.current;
+            // if (!ul2) return;
+            // // Remove old legend items
+            // while (ul2.firstChild) {
+            //   ul2.firstChild.remove();
+            // }
+            // // Reuse the built-in legendItems generator
+            // const items2 = c.options.plugins.legend.labels.generateLabels(c);
+            // items2.forEach((item) => {
+            //   const li = document.createElement('li');
+            //   li.style.marginRight = tailwindConfig().theme.margin[10];
+            //   // Button element
+            //   const button = document.createElement('button');
+            //   button.style.display = 'inline-flex';
+            //   button.style.alignItems = 'center';
+            //   button.style.opacity = item.hidden ? '.3' : '';
+            //   button.onclick = () => {
+            //     c.toggleDataVisibility(item.index);
+            //     c.update();
+            //   };
+            //   // Color box
+            //   const box = document.createElement('span');
+            //   box.style.display = 'block';
+            //   box.style.width = tailwindConfig().theme.width[4];
+            //   box.style.height = tailwindConfig().theme.height[4];
+            //   box.style.borderRadius = tailwindConfig().theme.borderRadius.full;
+            //   box.style.marginRight = tailwindConfig().theme.margin[2];
+            //   box.style.borderWidth = '3px';
+            //   box.style.borderColor = item.fillStyle;
+            //   box.style.backgroundColor = item.fillStyle;
+            //   box.style.pointerEvents = 'none';
+
+            //   // Label
+            //   const labelContainer = document.createElement('span');
+            //   labelContainer.style.display = 'flex';
+            //   labelContainer.style.alignItems = 'center';
+            //   const value = document.createElement('span');
+            //   value.classList.add('text-slate-800', 'dark:text-slate-100');
+            //   value.style.fontSize = tailwindConfig().theme.fontSize['3xl'][0];
+            //   value.style.lineHeight = tailwindConfig().theme.fontSize['3xl'][1].lineHeight;
+            //   value.style.fontWeight = tailwindConfig().theme.fontWeight.bold;
+            //   value.style.marginRight = tailwindConfig().theme.margin[2];
+            //   value.style.pointerEvents = 'none';
+            //   const label = document.createElement('span');
+            //   label.classList.add('text-slate-500', 'dark:text-slate-400');
+            //   label.style.fontSize = tailwindConfig().theme.fontSize.sm[0];
+            //   label.style.lineHeight = tailwindConfig().theme.fontSize.sm[1].lineHeight;
+            //   console.log(c.data.datasets[0]['data'])
+            //   // const theValue = c.data.datasets[item.datasetIndex];
+            //   // const valueText = document.createTextNode(theValue.toLocaleString());
+            //   // const labelText = document.createTextNode(item.text);
+            //   // value.appendChild(valueText);
+            //   // label.appendChild(labelText);
+            //   li.appendChild(button);
+            //   button.appendChild(box);
+            //   button.appendChild(labelContainer);
+            //   labelContainer.appendChild(value);
+            //   labelContainer.appendChild(label);
+            //   ul2.appendChild(li);
+            // });
+
+
+
             const ul = legend.current;
             if (!ul) return;
             // Remove old legend items
@@ -128,10 +194,13 @@ function DoughnutChart({
 
   return (
     <div className="grow flex flex-col justify-center">
+      <div className="px-5 py-3">
+        <ul ref={legend2} className="flex flex-wrap"></ul>
+      </div>
       <div>
         <canvas ref={canvas} width={width} height={height}></canvas>
       </div>
-      <div className="px-5 pt-2 pb-6">
+      <div className="px-5 pt-10 pb-6">
         <ul ref={legend} className="flex flex-wrap justify-center -m-1"></ul>
       </div>
     </div>

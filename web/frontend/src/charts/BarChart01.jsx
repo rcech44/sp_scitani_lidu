@@ -36,7 +36,7 @@ function BarChart01({
           padding: {
             top: 12,
             bottom: 16,
-            left: 20,
+            left: 25,
             right: 20,
           },
         },
@@ -47,7 +47,7 @@ function BarChart01({
             },
             ticks: {
               maxTicksLimit: 5,
-              callback: (value) => formatValue(value),
+              // callback: (value) => formatValue(value),
               color: darkMode ? textColor.dark : textColor.light,
             },
             grid: {
@@ -55,14 +55,14 @@ function BarChart01({
             },
           },
           x: {
-            type: 'time',
-            time: {
-              parser: 'MM-DD-YYYY',
-              unit: 'month',
-              displayFormats: {
-                month: 'MMM YY',
-              },
-            },
+            // type: 'time',
+            // time: {
+            //   parser: 'MM-DD-YYYY',
+            //   unit: 'month',
+            //   displayFormats: {
+            //     month: 'MMM YY',
+            //   },
+            // },
             border: {
               display: false,
             },
@@ -81,7 +81,7 @@ function BarChart01({
           tooltip: {
             callbacks: {
               title: () => false, // Disable tooltip title
-              label: (context) => formatValue(context.parsed.y),
+              // label: (context) => formatValue(context.parsed.y),
             },
             bodyColor: darkMode ? tooltipBodyColor.dark : tooltipBodyColor.light,
             backgroundColor: darkMode ? tooltipBgColor.dark : tooltipBgColor.light,
@@ -93,7 +93,7 @@ function BarChart01({
           mode: 'nearest',
         },
         animation: {
-          duration: 500,
+          duration: 1000,
         },
         maintainAspectRatio: false,
         resizeDelay: 200,
@@ -112,7 +112,7 @@ function BarChart01({
             const items = c.options.plugins.legend.labels.generateLabels(c);
             items.forEach((item) => {
               const li = document.createElement('li');
-              li.style.marginRight = tailwindConfig().theme.margin[4];
+              li.style.marginRight = tailwindConfig().theme.margin[10];
               // Button element
               const button = document.createElement('button');
               button.style.display = 'inline-flex';
@@ -125,13 +125,15 @@ function BarChart01({
               // Color box
               const box = document.createElement('span');
               box.style.display = 'block';
-              box.style.width = tailwindConfig().theme.width[3];
-              box.style.height = tailwindConfig().theme.height[3];
+              box.style.width = tailwindConfig().theme.width[4];
+              box.style.height = tailwindConfig().theme.height[4];
               box.style.borderRadius = tailwindConfig().theme.borderRadius.full;
               box.style.marginRight = tailwindConfig().theme.margin[2];
               box.style.borderWidth = '3px';
               box.style.borderColor = item.fillStyle;
+              box.style.backgroundColor = item.fillStyle;
               box.style.pointerEvents = 'none';
+
               // Label
               const labelContainer = document.createElement('span');
               labelContainer.style.display = 'flex';
@@ -148,7 +150,7 @@ function BarChart01({
               label.style.fontSize = tailwindConfig().theme.fontSize.sm[0];
               label.style.lineHeight = tailwindConfig().theme.fontSize.sm[1].lineHeight;
               const theValue = c.data.datasets[item.datasetIndex].data.reduce((a, b) => a + b, 0);
-              const valueText = document.createTextNode(formatValue(theValue));
+              const valueText = document.createTextNode(theValue.toLocaleString());
               const labelText = document.createTextNode(item.text);
               value.appendChild(valueText);
               label.appendChild(labelText);
