@@ -36,7 +36,7 @@ function BarChart01({
           padding: {
             top: 12,
             bottom: 16,
-            left: 25,
+            left: 27,
             right: 20,
           },
         },
@@ -194,7 +194,7 @@ function BarChart01({
   return (
     <React.Fragment>
       <div className="px-5 py-3">
-        <ul ref={legend} className="flex flex-wrap"></ul>
+        <ul ref={legend} className="flex flex-wrap justify-center"></ul>
       </div>
       <div className="grow">
         <canvas ref={canvas} width={width} height={height}></canvas>

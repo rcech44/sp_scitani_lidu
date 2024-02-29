@@ -62,6 +62,7 @@ function DashboardCard06() {
           // tailwindConfig().theme.colors.blue[900],
         ],
         borderWidth: 5,
+        borderColor: '#00000000'
       },
     ],
   };
@@ -69,7 +70,7 @@ function DashboardCard06() {
   return (
     <div className="flex flex-col col-span-full sm:col-span-4 xl:col-span-3 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
       <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-        <h2 className="font-semibold text-slate-800 dark:text-slate-100">Počet podle věkových period</h2>
+        <h2 className="font-semibold text-slate-800 dark:text-slate-100">Rozdělení podle věkových period</h2>
       </header>
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}
