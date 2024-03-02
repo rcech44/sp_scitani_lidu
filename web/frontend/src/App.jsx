@@ -11,6 +11,7 @@ import './charts/ChartjsConfig';
 
 // Import pages
 import Dashboard from './pages/Dashboard';
+import AgeSex from './pages/AgeSex';
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/age_sex" element={<AgeSex />} />
       </Routes>
     </>
   );

@@ -1,10 +1,10 @@
 import React from 'react';
-import DoughnutChart from '../../charts/DoughnutChartAgeSex';
+import DoughnutChartAgeSex from '../../charts/DoughnutChartAgeSex';
 
 // Import utilities
 import { tailwindConfig } from '../../utils/Utils';
 
-function DashboardCard06() {
+function DashboardCard06AgeSex() {
 
   const chartData = {
     labels: ['Děti', 'Dospívající', 'Dospělí', 'Staří'],
@@ -74,9 +74,9 @@ function DashboardCard06() {
       </header>
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}
-      <DoughnutChart data={chartData} width={389} height={260} />
+      <DoughnutChartAgeSex data={chartData} width={389} height={260} />
     </div>
   );
 }
 
-export default DashboardCard06;
+export default DashboardCard06AgeSex;

@@ -3,6 +3,7 @@ module.exports = ({ env }) => ({
     require('tailwindcss')({
       config: './src/css/tailwind.config.js'
     }),
-    require('autoprefixer')()
+    require('autoprefixer')(),
+    require('flowbite/plugin')
   ],
 })
