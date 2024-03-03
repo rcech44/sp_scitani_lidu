@@ -136,7 +136,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                         d="m23.72 12 .229.686A.984.984 0 0 1 24 13v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-8c0-.107.017-.213.051-.314L.28 12H8v4h8v-4H23.72ZM13 0v7h3l-4 5-4-5h3V0h2Z"
                       />
                     </svg>
-                    <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Dashboard</span>
+                    <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Česká republika</span>
                   </div>
                 </NavLink>
               </li>
@@ -162,59 +162,40 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                         />
                       </svg>
                       <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                        Věk a pohlaví
+                        Regiony
                       </span>
                     </div>
                   </div>
                 </NavLink>
               </li>
-              {/* Inbox */}
-              {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('inbox') && 'bg-slate-900'}`}>
+              {/* Messages */}
+              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('age_sex') && 'bg-slate-900'}`}>
                 <NavLink
                   end
-                  to="/inbox"
+                  to="/age_sex"
                   className={`block text-slate-200 truncate transition duration-150 ${
-                    pathname.includes('inbox') ? 'hover:text-slate-200' : 'hover:text-white'
+                    pathname.includes('age_sex') ? 'hover:text-slate-200' : 'hover:text-white'
                   }`}
                 >
-                  <div className="flex items-center">
-                    <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                      <path
-                        className={`fill-current ${pathname.includes('inbox') ? 'text-indigo-500' : 'text-slate-600'}`}
-                        d="M16 13v4H8v-4H0l3-9h18l3 9h-8Z"
-                      />
-                      <path
-                        className={`fill-current ${pathname.includes('inbox') ? 'text-indigo-300' : 'text-slate-400'}`}
-                        d="m23.72 12 .229.686A.984.984 0 0 1 24 13v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-8c0-.107.017-.213.051-.314L.28 12H8v4h8v-4H23.72ZM13 0v7h3l-4 5-4-5h3V0h2Z"
-                      />
-                    </svg>
-                    <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Inbox</span>
+                  <div className="flex items-center justify-between">
+                    <div className="grow flex items-center">
+                      <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
+                        <path
+                          className={`fill-current ${pathname.includes('age_sex') ? 'text-indigo-500' : 'text-slate-600'}`}
+                          d="M14.5 7c4.695 0 8.5 3.184 8.5 7.111 0 1.597-.638 3.067-1.7 4.253V23l-4.108-2.148a10 10 0 01-2.692.37c-4.695 0-8.5-3.184-8.5-7.11C6 10.183 9.805 7 14.5 7z"
+                        />
+                        <path
+                          className={`fill-current ${pathname.includes('age_sex') ? 'text-indigo-300' : 'text-slate-400'}`}
+                          d="M11 1C5.477 1 1 4.582 1 9c0 1.797.75 3.45 2 4.785V19l4.833-2.416C8.829 16.85 9.892 17 11 17c5.523 0 10-3.582 10-8s-4.477-8-10-8z"
+                        />
+                      </svg>
+                      <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                        Kraje
+                      </span>
+                    </div>
                   </div>
                 </NavLink>
-              </li> */}
-              {/* Calendar */}
-              {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('calendar') && 'bg-slate-900'}`}>
-                <NavLink
-                  end
-                  to="/calendar"
-                  className={`block text-slate-200 truncate transition duration-150 ${
-                    pathname.includes('calendar') ? 'hover:text-slate-200' : 'hover:text-white'
-                  }`}
-                >
-                  <div className="flex items-center">
-                    <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                      <path className={`fill-current ${pathname.includes('calendar') ? 'text-indigo-500' : 'text-slate-600'}`} d="M1 3h22v20H1z" />
-                      <path
-                        className={`fill-current ${pathname.includes('calendar') ? 'text-indigo-300' : 'text-slate-400'}`}
-                        d="M21 3h2v4H1V3h2V1h4v2h10V1h4v2Z"
-                      />
-                    </svg>
-                    <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                      Calendar
-                    </span>
-                  </div>
-                </NavLink>
-              </li> */}
+              </li>
             </ul>
           </div>
           {/* More group */}

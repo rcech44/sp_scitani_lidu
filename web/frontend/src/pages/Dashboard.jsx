@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import WelcomeBanner from '../partials/dashboard/WelcomeBanner';
+import SearchBar from '../partials/dashboard/SearchBar';
 import DashboardAvatars from '../partials/dashboard/DashboardAvatars';
 import FilterButton from '../components/DropdownFilter';
 import Datepicker from '../components/Datepicker';
@@ -42,6 +43,8 @@ function Dashboard() {
 
             {/* Welcome banner */}
             <WelcomeBanner />
+
+            <SearchBar />
 
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
