@@ -52,6 +52,10 @@ function Dashboard() {
               
               {/* Bar chart (Direct vs Indirect) */}
               <DashboardCard04 />
+              {/* Doughnut chart (Top Countries) */}
+              <DashboardCard06 />
+              {/* Card (Reasons for Refunds) */}
+              <DashboardCard11 />
               {/* Line chart (Real Time Value) */}
               <DashboardCard05 />
               {/* Line chart (Acme Plus) */}
@@ -60,8 +64,6 @@ function Dashboard() {
               <DashboardCard02 />
               {/* Line chart (Acme Professional) */}
               <DashboardCard03 />
-              {/* Doughnut chart (Top Countries) */}
-              <DashboardCard06 />
               {/* Table (Top Channels) */}
               <DashboardCard07 />
               {/* Line chart (Sales Over Time) */}
@@ -70,8 +72,6 @@ function Dashboard() {
               <DashboardCard09 />
               {/* Card (Customers) */}
               <DashboardCard10 />
-              {/* Card (Reasons for Refunds) */}
-              <DashboardCard11 />
               {/* Card (Recent Activity) */}
               <DashboardCard12 />
               {/* Card (Income/Expenses) */}

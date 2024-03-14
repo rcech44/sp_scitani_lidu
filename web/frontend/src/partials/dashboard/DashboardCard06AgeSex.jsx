@@ -1,5 +1,5 @@
 import React from 'react';
-import DoughnutChartAgeSex from '../../charts/DoughnutChartAgeSex';
+import DoughnutChartAgeSex from '../../charts/DoughnutChart';
 
 // Import utilities
 import { tailwindConfig } from '../../utils/Utils';
