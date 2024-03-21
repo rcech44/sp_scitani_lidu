@@ -1,3 +1,7 @@
+*.csv
+*.xlsx
+
+
 .idea/
 mongo_wsl_starter/nohup.out
 
