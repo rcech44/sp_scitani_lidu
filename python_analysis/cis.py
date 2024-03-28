@@ -47,6 +47,13 @@ veky_podle_fazi = {
     'stari': ['65 - 69 let', '70 - 74 let', '75 - 79 let', '80 - 84 let', '85 - 89 let', '95 - 99 let', '100 a více let'],
 }
 
+vzdelani_podle_typu = {
+    'bez_vzdelani': ['Bez vzdělání'],
+    'zakladni_vzdelani': ['Základní vzdělání'],
+    'stredni vzdelani': ['Nástavbové vzdělání', 'Úplné střední všeobecné vzdělání', 'Nižší střední a střední vzdělání', 'Úplné střední odborné vzdělání'],
+    'vysokoskolske_vzdelani': ['Vysokoškolské bakalářské vzdělání', 'Vysokoškolské magisterské vzdělání', 'Vysokoškolské doktorské vzdělání'],
+}
+
 cis_okresy = {
     40169: 'Benešov',
     40177: 'Beroun',

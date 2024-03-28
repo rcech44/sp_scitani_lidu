@@ -12,10 +12,26 @@ def load_csv_into_db(collection, file_path, chunksize=1000) -> None:
     csv_chunksize = chunksize
 
     # Get data from CSV and insert into MongoDB
-    for chunk in pd.read_csv(csv_file_path, chunksize=csv_chunksize):
+    for chunk in pd.read_csv(csv_file_path, chunksize=csv_chunksize, sep=';'):
         chunk.replace({np.nan: None}, inplace=True)
         records = chunk.to_dict('records')
         collection.insert_many(records)
+
+def load_csv_into_db_debug(collection, file_path, chunksize=1000) -> None:
+
+    # Configuration
+    client = MongoClient('mongodb://localhost:27017')
+    db = client['scitani_lidu']
+    collection = db[collection]
+    csv_file_path = file_path
+    csv_chunksize = chunksize
+
+    # Get data from CSV and insert into MongoDB
+    for chunk in pd.read_csv(csv_file_path, chunksize=csv_chunksize, sep=';'):
+        chunk.replace({np.nan: None}, inplace=True)
+        records = chunk.to_dict('records')
+        print(records)  # Vypíše prvních pár řádků pro kontrolu
+        break  # Po kontrole můžete tento řádek odstranit
 
 def load_from_db(collection) -> pd.DataFrame:
 
