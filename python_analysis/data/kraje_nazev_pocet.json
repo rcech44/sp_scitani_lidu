@@ -1,0 +1,18 @@
+{
+    "kraje_nazev_pocet": {
+        "Hlavní město Praha" : 1301432,
+        "Středočeský kraj" : 1415463,
+        "Jihočeský kraj" : 631803,
+        "Plzeňský kraj" : 581436,
+        "Karlovarský kraj" : 279103,
+        "Ústecký kraj" : 789098,
+        "Liberecký kraj" : 435220,
+        "Královéhradecký kraj" : 538303,
+        "Pardubický kraj" : 510037,
+        "Kraj Vysočina" : 497661,
+        "Jihomoravský kraj" : 1197651,
+        "Olomoucký kraj" : 619788,
+        "Zlínský kraj" : 564331,
+        "Moravskoslezský kraj" : 1162841          
+    }
+}
